@@ -1,16 +1,40 @@
-package Variable.DataTypes_Assignment;
+package Conditional_Assignment;
+
+import java.util.Scanner;
 
 public class Test5 {
     public static void main(String[] args) {
-        int num1=2;
-        int num2=3;
-        int temp;
-        System.out.println("The first number before swap is : "+num1);
-        System.out.println("The second number before swap is : "+num2);
-        temp=num1;
-        num1=num2;
-        num2=temp;
-        System.out.println("The first number after swap is : "+num1);
-        System.out.println("The second number after swap is : "+num2);
+        char opr;
+        Double num_1;
+        Double num_2;
+        Double ans;
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter an operator : (+,-,*,/)");
+        opr=sc.next().charAt(0);
+        System.out.println("Enter first number : ");
+        num_1= sc.nextDouble();
+        System.out.println("Enter second number : ");
+        num_2= sc.nextDouble();
+        switch (opr){
+            case '+':
+                ans=num_1+num_2;
+                System.out.println(num_1+ " + " +num_2+ " = " +ans);
+                break;
+            case '-':
+                ans=num_1-num_2;
+                System.out.println(num_1+ " - " +num_2+ " = " +ans);
+                break;
+            case '*':
+                ans=num_1*num_2;
+                System.out.println(num_1+ " * " +num_2+ " = " +ans);
+                break;
+            case '/':
+                ans=num_1/num_2;
+                System.out.println(num_1+ " / " +num_2+ " = " +ans);
+                break;
+            default:
+                System.out.println("Error!!! The Operator  you have given is not Correct ");
+                break;
+        }
     }
 }
