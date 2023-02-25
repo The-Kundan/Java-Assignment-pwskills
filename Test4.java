@@ -1,17 +1,15 @@
-package Conditional_Assignment;
+package Taking_input_Assignment;
 
 import java.util.Scanner;
 
 public class Test4 {
     public static void main(String[] args) {
         Scanner sc =new Scanner(System.in);
-        int x;
-        System.out.println("Enter the number : ");
-        x= sc.nextInt();
-        if (x >=0) {
-            System.out.println("You have entered a positive number ");
-        }else {
-            System.out.println("You have entered a negative number ");
+        int t = sc.nextInt();
+        for (int i = 1; i <=t ; i++) {
+            int x= sc.nextInt();
+            int y= sc.nextInt();
+            System.out.println(x+y);
         }
     }
 }
